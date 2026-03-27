@@ -1,0 +1,9 @@
+services:
+  telegram-service:
+    container_name: telegram-service-v1
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "8081:8081"
