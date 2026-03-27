@@ -1,7 +1,7 @@
 # Telegram Service
 Сервис устанавливает и поддерживает несколько независимых соединений с Telegram через библиотеку [gotd](https://github.com/gotd/td)
 
-[Старт]()
+[Старт](https://github.com/andreyxaxa/Telegram-Service/tree/main?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA)
 
 ## Обзор / Описание архитектурных решений
 
