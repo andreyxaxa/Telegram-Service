@@ -53,14 +53,16 @@
 ├── cmd/                         # Entry point приложения, чтение конфига + запуск
 ├── config/                      # Конфиг
 ├── docs/proto/v1                # .proto + source
-├── internal/                    # Бизнес логика
+├── internal/                    # Внутренняя логика приложения
 │   ├── app/telegram-service     # Инициализация и запуск всех компонентов в функции Run(она будет вызвана в cmd/)
 │   ├── controller/grpc/         # Слой хендлеров сервера
-│   │   ├── v1/                  # Структура контроллера, реализация методов grpc-сервера
+│   │   ├── v1/                  # Структура контроллера, реализация методов TelegramService
 │   │   └── router.go            # Создание роутера
 │   ├── entity/                  # Сущности бизнес-логики
-│   ├── repo/                    # Слой репозиториев(хранилище), с которым работает бизнес-логика
+│   ├── repo/                    # Слой репозиториев(хранилища)
+│   │   └── session/inmemory/    # Inmemory реализация (map + RWMutex)
 │   └── usecase/                 # Бизнес-логика
+│       └── telegram/            # CreateSession, DeleteSession, SendMessage, SubscribeMessages
 ├── .dockerignore
 ├── .env.example
 ├── .gitignore                
